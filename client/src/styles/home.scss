@@ -1,0 +1,20 @@
+.home {
+  max-width: 1000px;
+  padding: 30px;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  .home-text {
+    h1 {
+      font-size: calc(1.375rem + 1.5vw);
+    }
+
+    p {
+      font-size: small;
+    }
+  }
+}
+.searchbar {
+  width: 905px;
+  height: 74px;
+}
