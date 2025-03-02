@@ -12,15 +12,16 @@ export default function Navbar() {
       <li>
         <a href="trendingnow">Trending&Blending</a>
       </li>
-      <li>
+      {/* <li>
         <a href="search">Search</a>
-      </li>
+      </li> */}
       <li>
         <a href="timemachine">By the decade</a>
       </li>
       <li>
         <a href="trendpredictor">Coming up</a>
       </li>
+      
       <div className="user-buttons">
         <button>Login</button>
       </div>

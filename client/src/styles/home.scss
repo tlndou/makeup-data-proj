@@ -1,20 +1,79 @@
 .home {
-  max-width: 1000px;
-  padding: 30px;
-  margin: 0 auto;
-  min-height: 100vh;
+    max-width: 1000px;
+    padding: 30px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 
-  .home-text {
-    h1 {
-      font-size: calc(1.375rem + 1.5vw);
+    .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    //flex: 1;
+
+        h1 {
+            font-size: calc(1.375rem + 1.5vw);
+        }
+
+        p {
+            font-size: small;
+            text-align: center;
+        }
+
+        .searchbar {
+            width: 905px;
+            height: 54px;    
+            border-radius: 50px;
+            border: 1px solid transparent;
+            background: #fff;
+            box-shadow: 0px 2px 8px 0px rgba(60, 64, 67, 0.25);
+
+            outline: none;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+
+            &:focus {
+                box-shadow: 0px 2px 8px 0px rgba(127, 37, 73, 0.55);
+            }
+        }
     }
 
-    p {
-      font-size: small;
+    .product-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .one-product-card{
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px); /* Slight lift on hover */
+                box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+            }
+
+            p {
+                font-size: 14px;
+                color: #333; /* Dark text color */
+            }
+        }
     }
-  }
+
 }
-.searchbar {
-  width: 905px;
-  height: 74px;
-}
+

@@ -10,19 +10,37 @@ $background-color_1: #fdf6f0;
 	padding: 15px;
 	color: $color_1;
 	background-color: $background-color_1;
+	
 	button {
 		width: fit-content;
 	}
+	
 	li {
 		list-style: none;
 	}
+	
 	a {
 		text-decoration: none;
 		color: $color_1;
 		cursor: pointer;
-		
-		&:hover {
-			text-decoration: underline;
+		position: relative; // Needed for the pseudo-element positioning
+	  
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			transform: scaleX(0);
+			height: 2px;
+			bottom: -5px; // Adjust this if needed
+			left: 0;
+			background-color: $color_1;
+			transform-origin: bottom left;
+			transition: transform 0.3s ease-in, transform 0.2s ease-out;
 		}
-	}
+	  
+		&:hover::after {
+			transform: scaleX(1);
+			transform-origin: bottom left;
+		}
+	}	  
 }
